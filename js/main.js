@@ -1,6 +1,4 @@
-
 var currentID = null;
-
 
 async function update(){
 
@@ -16,11 +14,10 @@ async function update(){
 
   if (data.id !== currentID){
     currentID = data.id;
-    
+    applyWallpaper(data.url,data.title,data.user)
   }
 
 }
-
 
 // update every 60 seconds
 setInterval(update,60000);
